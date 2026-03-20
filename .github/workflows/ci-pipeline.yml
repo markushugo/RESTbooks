@@ -27,7 +27,6 @@ jobs:
 
     - name: Kør Unit Tests
       run: dotnet test --no-build --verbosity normal
-
 - name: Start API i baggrunden
       run: dotnet run --project src/C:\Users\marku\source\repos\RESTbooks\RESTbooks\RESTbooks.csproj &
       env:
