@@ -33,7 +33,7 @@ jobs:
 
       - name: Start API i baggrunden
         run: |
-          nohup dotnet run --project ./RESTbooks/RESTbooks.csproj > api.log 2>&1 &
+          nohup dotnet run --project ./src/RESTbooks/RESTbooks.csproj > api.log 2>&1 &
         env:
           ASPNETCORE_URLS: http://localhost:5144
 
