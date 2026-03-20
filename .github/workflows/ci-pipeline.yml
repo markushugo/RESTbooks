@@ -29,8 +29,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
 - name: Start API i baggrunden
       run: dotnet run --project src/C:\Users\marku\source\repos\RESTbooks\RESTbooks\RESTbooks.csproj &
-      env:
-        ASPNETCORE_URLS: http://localhost:5144
+    
 
     - name: Vent på at API'et er klar
       run: sleep 10 # Giver API'et tid til at starte op
