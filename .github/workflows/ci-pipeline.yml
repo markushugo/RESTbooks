@@ -28,16 +28,32 @@ jobs:
       - name: Kør Unit Tests
         run: dotnet test --no-build --verbosity normal
 
+      - name: Installer Newman
+        run: npm install -g newman
+
       - name: Start API i baggrunden
-        run: dotnet run --project src/RESTbooks/RESTbooks/RESTbooks.csproj &
+        run: |
+          nohup dotnet run --project src/RESTbooks/RESTbooks/RESTbooks.csproj > api.log 2>&1 &
         env:
           ASPNETCORE_URLS: http://localhost:5144
 
       - name: Vent på at API'et er klar
-        run: sleep 10
-
-      - name: Installer Newman
-        run: npm install -g newman
+        run: |
+          for i in {1..30}; do
+            if curl -f http://localhost:5144; then
+              echo "API is up"
+              exit 0
+            fi
+            echo "Waiting for API..."
+            sleep 2
+          done
+          echo "API failed to start"
+          cat api.log
+          exit 1
 
       - name: Kør Postman Tests
         run: newman run postman-tests/api-tests.json --env-var "baseUrl=http://localhost:5144"
+
+      - name: Vis API log ved fejl
+        if: failure()
+        run: cat api.log
