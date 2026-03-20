@@ -43,5 +43,5 @@ jobs:
     - name: Kør Postman Tests
       # Skift stien ud til jeres eksporterede JSON-fil. 
       # Overvej at sende baseUrl med som en variabel, hvis jeres tests kræver det.
-      run: newman run postman-tests/min-collection.json --env-var "baseUrl=http://localhost:5000”
+      run: newman run postman-tests/api-tests.json --env-var "baseUrl=http://localhost:5144”
 
