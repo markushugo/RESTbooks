@@ -34,7 +34,7 @@ namespace UnitTestProject
 
             // Assert
             Assert.NotNull(book);
-            Assert.Equal("Tests Book", book.Title);
+            Assert.Equal("Test Book", book.Title);
             Assert.Equal("Author", book.Author);
             Assert.Equal(50.0, book.Price);
         }
