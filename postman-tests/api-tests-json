@@ -19,21 +19,31 @@
       "name": "GetById",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5144/api/books/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5144",
+          "path": [
+            "api",
+            "books",
+            "1"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "AddBook",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 99.95\r\n    }",
+          "raw": " {\r\n        \"title\": \"The Great Gyat\",\r\n        \"author\": \"Fucking. Scott Fitzgerald\",\r\n        \"price\": 999.95\r\n    }",
           "options": {
             "raw": {
               "language": "json"
@@ -57,18 +67,20 @@
     },
     {
       "name": "UpdateBook",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
-        "method": "GET",
+        "method": "PUT",
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 9.95\r\n    }"
+          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 9.95\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
         },
         "url": {
-          "raw": "http://localhost:5144/api/books/26",
+          "raw": "http://localhost:5144/api/books/25",
           "protocol": "http",
           "host": [
             "localhost"
@@ -77,7 +89,7 @@
           "path": [
             "api",
             "books",
-            "26"
+            "25"
           ]
         }
       },
@@ -85,11 +97,8 @@
     },
     {
       "name": "DeleteBook",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
       "request": {
-        "method": "GET",
+        "method": "DELETE",
         "header": [],
         "body": {
           "mode": "raw",
