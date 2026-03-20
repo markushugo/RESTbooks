@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "f1d22e72-7bf6-411b-839c-088ae65c5246",
-    "name": "Beers",
+    "_postman_id": "9a6724de-8df1-446a-af8c-9a9646d1eb39",
+    "name": "Books",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "52457389",
-    "_collection_link": "https://go.postman.co/collection/52457389-f1d22e72-7bf6-411b-839c-088ae65c5246?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/52457389-9a6724de-8df1-446a-af8c-9a9646d1eb39?source=collection_link"
   },
   "item": [
     {
@@ -77,7 +77,7 @@
           "path": [
             "api",
             "books",
-            "25"
+            "26"
           ]
         }
       },
@@ -85,9 +85,29 @@
     },
     {
       "name": "DeleteBook",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 9.95\r\n    }"
+        },
+        "url": {
+          "raw": "http://localhost:5144/api/books/25",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5144",
+          "path": [
+            "api",
+            "books",
+            "25"
+          ]
+        }
       },
       "response": []
     }
