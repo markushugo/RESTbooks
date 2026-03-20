@@ -28,8 +28,8 @@ jobs:
     - name: Kør Unit Tests
       run: dotnet test --no-build --verbosity normal
 
-- name: Start API i baggrunden
-      run: dotnet run --project src/RESTbooks\RESTbooks\RESTbooks.csproj &
+    - name: Start API i baggrunden
+      run: dotnet run --project src/RESTbooks/RESTbooks/RESTbooks.csproj &
       env:
         ASPNETCORE_URLS: http://localhost:5144
 
@@ -40,5 +40,5 @@ jobs:
       run: npm install -g newman
 
     - name: Kør Postman Tests
-      run: newman run postman-tests/api-tests.json --env-var "baseUrl=http://localhost:5144”
+      run: newman run postman-tests/api-tests.json --env-var "baseUrl=http://localhost:5144"
 
