@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "f1d22e72-7bf6-411b-839c-088ae65c5246",
+    "name": "Beers",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52457389",
+    "_collection_link": "https://go.postman.co/collection/52457389-f1d22e72-7bf6-411b-839c-088ae65c5246?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GetAll Succes",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "GetById",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "AddBook",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 99.95\r\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5144/api/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5144",
+          "path": [
+            "api",
+            "books"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateBook",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\r\n        \"title\": \"The Great Gatsby\",\r\n        \"author\": \"F. Scott Fitzgerald\",\r\n        \"price\": 9.95\r\n    }"
+        },
+        "url": {
+          "raw": "http://localhost:5144/api/books/26",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5144",
+          "path": [
+            "api",
+            "books",
+            "26"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteBook",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
